@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Chess, Engine, Javascript, Play Chess, Chess Program, Javascript Chess, Game">
+	<title>Mini web-project by ISB3</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/icon.png" />
+	<link href="styles.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+	<header>
+		<h2>Chaturanga 2.1.2 <a href="versionHist.html" id="versionLink">version history</a></h3>
+<br>
+	</header>
+
+	<div id="FenInDiv">
+		<input type="text" id="fenIn" value="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1">
+		<button style="background-color: blue; border-color:red;color:white" type="button" id="SetFen">Set Position</button>
+	</div>
+	<div id="ThinkingImageDiv">
+	<button style="background-color: red; border-color:blue;color:white" type="button" id="NewGameButton">New Game</button><br><br>
+	<button style="background-color: black; border-color:blue;color:white" type="button" id="FlipButton">Flip Board</button><br><br>
+	</div>
+	<div id="Board">
+		<div class="Square clickElement rank8 file1 Dark"></div>
+		<div class="Square clickElement rank8 file2 Light"></div>
+		<div class="Square clickElement rank8 file3 Dark"></div>
+		<div class="Square clickElement rank8 file4 Light"></div>
+		<div class="Square clickElement rank8 file5 Dark"></div>
+		<div class="Square clickElement rank8 file6 Light"></div>
+		<div class="Square clickElement rank8 file7 Dark"></div>
+		<div class="Square clickElement rank8 file8 Light"></div>
+		<div class="Square clickElement rank7 file1 Light"></div>
+		<div class="Square clickElement rank7 file2 Dark"></div>
+		<div class="Square clickElement rank7 file3 Light"></div>
+		<div class="Square clickElement rank7 file4 Dark"></div>
+		<div class="Square clickElement rank7 file5 Light"></div>
+		<div class="Square clickElement rank7 file6 Dark"></div>
+		<div class="Square clickElement rank7 file7 Light"></div>
+		<div class="Square clickElement rank7 file8 Dark"></div>
+		<div class="Square clickElement rank6 file1 Dark"></div>
+		<div class="Square clickElement rank6 file2 Light"></div>
+		<div class="Square clickElement rank6 file3 Dark"></div>
+		<div class="Square clickElement rank6 file4 Light"></div>
+		<div class="Square clickElement rank6 file5 Dark"></div>
+		<div class="Square clickElement rank6 file6 Light"></div>
+		<div class="Square clickElement rank6 file7 Dark"></div>
+		<div class="Square clickElement rank6 file8 Light"></div>
+		<div class="Square clickElement rank5 file1 Light"></div>
+		<div class="Square clickElement rank5 file2 Dark"></div>
+		<div class="Square clickElement rank5 file3 Light"></div>
+		<div class="Square clickElement rank5 file4 Dark"></div>
+		<div class="Square clickElement rank5 file5 Light"></div>
+		<div class="Square clickElement rank5 file6 Dark"></div>
+		<div class="Square clickElement rank5 file7 Light"></div>
+		<div class="Square clickElement rank5 file8 Dark"></div>
+		<div class="Square clickElement rank4 file1 Dark"></div>
+		<div class="Square clickElement rank4 file2 Light"></div>
+		<div class="Square clickElement rank4 file3 Dark"></div>
+		<div class="Square clickElement rank4 file4 Light"></div>
+		<div class="Square clickElement rank4 file5 Dark"></div>
+		<div class="Square clickElement rank4 file6 Light"></div>
+		<div class="Square clickElement rank4 file7 Dark"></div>
+		<div class="Square clickElement rank4 file8 Light"></div>
+		<div class="Square clickElement rank3 file1 Light"></div>
+		<div class="Square clickElement rank3 file2 Dark"></div>
+		<div class="Square clickElement rank3 file3 Light"></div>
+		<div class="Square clickElement rank3 file4 Dark"></div>
+		<div class="Square clickElement rank3 file5 Light"></div>
+		<div class="Square clickElement rank3 file6 Dark"></div>
+		<div class="Square clickElement rank3 file7 Light"></div>
+		<div class="Square clickElement rank3 file8 Dark"></div>
+		<div class="Square clickElement rank2 file1 Dark"></div>
+		<div class="Square clickElement rank2 file2 Light"></div>
+		<div class="Square clickElement rank2 file3 Dark"></div>
+		<div class="Square clickElement rank2 file4 Light"></div>
+		<div class="Square clickElement rank2 file5 Dark"></div>
+		<div class="Square clickElement rank2 file6 Light"></div>
+		<div class="Square clickElement rank2 file7 Dark"></div>
+		<div class="Square clickElement rank2 file8 Light"></div>
+		<div class="Square clickElement rank1 file1 Light"></div>
+		<div class="Square clickElement rank1 file2 Dark"></div>
+		<div class="Square clickElement rank1 file3 Light"></div>
+		<div class="Square clickElement rank1 file4 Dark"></div>
+		<div class="Square clickElement rank1 file5 Light"></div>
+		<div class="Square clickElement rank1 file6 Dark"></div>
+		<div class="Square clickElement rank1 file7 Light"></div>
+		<div class="Square clickElement rank1 file8 Dark"></div>
+			<img src="images/wR.png" class="Piece rank1 file1"><img
+			src="images/wN.png" class="Piece rank1 file2"><img src="images/wB.png" class="Piece rank1 file3"><img
+			src="images/wQ.png" class="Piece rank1 file4"><img src="images/wK.png" class="Piece rank1 file5"><img
+			src="images/wB.png" class="Piece rank1 file6"><img src="images/wN.png" class="Piece rank1 file7"><img
+			src="images/wR.png" class="Piece rank1 file8"><img src="images/wP.png" class="Piece rank2 file1"><img
+			src="images/wP.png" class="Piece rank2 file2"><img src="images/wP.png" class="Piece rank2 file3"><img
+			src="images/wP.png" class="Piece rank2 file4"><img src="images/wP.png" class="Piece rank2 file5"><img
+			src="images/wP.png" class="Piece rank2 file6"><img src="images/wP.png" class="Piece rank2 file7"><img
+			src="images/wP.png" class="Piece rank2 file8"><img src="images/bP.png" class="Piece rank7 file1"><img
+			src="images/bP.png" class="Piece rank7 file2"><img src="images/bP.png" class="Piece rank7 file3"><img
+			src="images/bP.png" class="Piece rank7 file4"><img src="images/bP.png" class="Piece rank7 file5"><img
+			src="images/bP.png" class="Piece rank7 file6"><img src="images/bP.png" class="Piece rank7 file7"><img
+			src="images/bP.png" class="Piece rank7 file8"><img src="images/bR.png" class="Piece rank8 file1"><img
+			src="images/bN.png" class="Piece rank8 file2"><img src="images/bB.png" class="Piece rank8 file3"><img
+			src="images/bQ.png" class="Piece rank8 file4"><img src="images/bK.png" class="Piece rank8 file5"><img
+			src="images/bB.png" class="Piece rank8 file6"><img src="images/bN.png" class="Piece rank8 file7"><img
+			src="images/bR.png" class="Piece rank8 file8">
+	</div>
+	<div id="CurrentFenDiv"><b>current board position</b><br>
+		<span id="currentFenSpan">rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - KQkq 0 0</span>
+
+	</div>
+	<br>
+	<div id="EngineOutput">Thinking Time: <br>
+		<select id="ThinkTimeChoice">
+			<option value="1" selected="selected">1s</option>
+			<option value="2">2s</option>
+			<option value="4">4s</option>
+			<option value="6">6s</option>
+			<option value="8">8s</option>
+			<option value="10">10s</option>
+		</select><br><br><br>
+
+		<span id="BestOut">BestMove:</span><br>
+		<span id="DepthOut">Depth:</span><br>
+		<span id="ScoreOut">Score:</span><br>
+		<span id="NodesOut">Nodes:</span><br>
+		<span id="OrderingOut">Ordering:</span><br>
+		<span id="TimeOut">Time:</span><br><br>
+		
+		
+		
+		<button style="background-color: red; border-color:blue;color:white" type="button" id="SearchButton">Move Now</button><br><br>
+		<button style="background-color: green; border-color:blue;color:white" type="button" id="TakeButton">Take Back</button><br><br><br>
+		
+		<span id="GameStatus"></span>
+
+
+	</div>
+			<script src="js/jquery-1.10.1.min.js"></script>
+		<!--<script src="js/all.js"></script>-->
+		<!--<script src="js/all_comp.js"></script>-->
+		<script src="js/defs.js"></script>
+		<script src="js/io.js"></script>
+		<script src="js/board.js"></script>
+		<script src="js/movegen.js"></script>
+		<script src="js/makemove.js"></script>
+		<script src="js/perft.js"></script>
+		<script src="js/evaluate.js"></script>
+		<script src="js/pvtable.js"></script>
+		<script src="js/search.js"></script>
+		<script src="js/protocol.js"></script>
+		<script src="js/gui.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
+
