@@ -97,12 +97,6 @@ a:hover span
 	transform: scale(0.98);
 }
 
-
-
-
-
-
-
 .Piece {
 	position: absolute;
 }
@@ -124,7 +118,6 @@ a:hover span
 .SqSelected {
 	background-color:#6ce46d;
 }
-
 
 .clickElement { cursor:pointer }
 

@@ -1,51 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-<a href="index.html" id="versionLink">Back</a>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About Me and Changelog</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			line-height: 1.6;
+			margin: 20px;
+			padding: 20px;
+			background-color: #f4f4f4;
+		}
+
+		.container {
+			max-width: 800px;
+			margin: auto;
+			background: #fff;
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		h1,
+		h2 {
+			text-align: center;
+			color: #333;
+		}
+
+		p {
+			color: #555;
+		}
+
+		ul {
+			list-style-type: disc;
+			margin-left: 20px;
+		}
+
+		pre {
+			background: #e8e8e8;
+			padding: 10px;
+			border-radius: 4px;
+			overflow: auto;
+		}
+	</style>
 </head>
-	<body>
 
-<pre>
-
-2.1.2 
-Added BestMove
-Added Depth used in move by computer
-Added the count of number of nodes formed by search tree to make move
-
-2.1.1
-Changed pawns images
-Font enahncement
-
-2.1
-Fixed an error in MoveExits() that stopped engine thinking
+<body>
+	<div class="container">
+		<h1>Changelog</h1>
+		<pre>2.1
+Fixed Typo in MoveExits() that stopped engine thinking
 
 2.0
 Fixed MoveExits() to align with tutorial
 
-
 1.9
-Fixed false moves in GenerateMoves()
-Fixed castling when board flipped
+Fixed bad Enpassant Bug in GenerateMoves()
 
 1.8
-Current board position Added under the board
-Added castling event
+Current FEN Added under the board
 
 1.7
 Fixed a bad bug causing the program to hang when reaching a position in the search tree with no pawns
 
 1.6
 Added null move pruning
+Added passed and isolated pawn knowledge
+Added open file knowledge
 Added basic king endgame knowledge
 
 1.5
 Added takeback button
 
 1.4
-Added buttons for tips named Move NOw(when players doesn't what pawn to move)
+Added small opening book to vary play
 
 1.3
-Added castling bug when board flipped
+Corrected castling bug when board flipped
 Added recogniser for game end, engine won't play in game over positions
 
 1.2
@@ -57,4 +90,8 @@ Fixed error allowing illegal moves
 
 1.0
 Initial Release
-<pre>
+        </pre>
+	</div>
+</body>
+
+</html>
